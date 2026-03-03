@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.js"></script>
+    <link rel="stylesheet" href="../../../charte-graphique/style.css">
+</head>
+
+<body class="p-4">
+    <!-- Quiz Header (Preline Stepper/Progress) -->
+    <div class="space-y-3">
+        <div class="flex justify-between items-center">
+            <h1 class="text-sm font-bold text-soli-dark">Algorithmes J05</h1>
+            <div class="flex items-center gap-2">
+                <span class="text-xs font-bold text-soli-danger bg-red-50 px-2 py-1 rounded border border-red-100">
+                    ⏱ 12:45
+                </span>
+            </div>
+        </div>
+
+        <!-- Progress -->
+        <div class="flex flex-col gap-1">
+            <div class="flex justify-between items-center">
+                <span class="text-[10px] font-bold text-soli-muted uppercase">Progression</span>
+                <span class="text-[10px] font-bold text-soli-dark">Question 3 / 10</span>
+            </div>
+            <div class="flex w-full h-1.5 bg-gray-200 rounded-full overflow-hidden" role="progressbar"
+                aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                <div class="flex flex-col justify-center overflow-hidden bg-soli-action transition duration-500"
+                    style="width: 30%"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

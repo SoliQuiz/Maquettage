@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <link rel="stylesheet" href="../../../charte-graphique/style.css">
+</head>
+
+<body class="p-4 bg-gray-50 flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-sm p-6 bg-white border border-soli rounded-xl shadow-sm">
+        <div class="text-center mb-8">
+            <h1 class="text-2xl font-bold text-soli-dark">Soli<span class="text-soli-action">Quiz</span></h1>
+            <p class="text-sm text-soli-muted mt-1">Connectez-vous à votre espace</p>
+        </div>
+
+        <form class="space-y-5">
+            <div class="space-y-2">
+                <label for="username" class="block text-sm font-medium text-soli-dark">Identifiant</label>
+                <input type="text" id="username"
+                    class="py-3 px-4 block w-full border-soli border rounded-lg text-sm focus:border-soli-action focus:ring-soli-action transition-all duration-300"
+                    placeholder="ex: jdoe" required>
+            </div>
+
+            <div class="space-y-2">
+                <label for="password" class="block text-sm font-medium text-soli-dark">Mot de passe</label>
+                <input type="password" id="password"
+                    class="py-3 px-4 block w-full border-soli border rounded-lg text-sm focus:border-soli-action focus:ring-soli-action transition-all duration-300"
+                    placeholder="••••••••" required>
+            </div>
+
+            <button type="submit"
+                class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-soli-action text-white hover:bg-soli-dark disabled:opacity-50 disabled:pointer-events-none transition-all duration-300">
+                Se connecter
+            </button>
+        </form>
+
+        <div class="mt-6 pt-6 border-t border-soli text-center">
+            <p class="text-xs text-soli-muted italic">Première connexion ? Contactez votre administrateur.</p>
+        </div>
+    </div>
+</body>
+
+</html>

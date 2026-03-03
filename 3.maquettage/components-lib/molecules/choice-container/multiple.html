@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.js"></script>
+    <link rel="stylesheet" href="../../../charte-graphique/style.css">
+</head>
+
+<body class="p-4">
+    <!-- Choice Group (Checkboxes for Multiple Choice) -->
+    <div class="grid space-y-3">
+        <label
+            class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] font-bold rounded uppercase border border-gray-200 mb-2 w-fit">☑️
+            Choix Multiple</label>
+
+        <label for="multi-choice-1"
+            class="max-w-xs flex p-3 w-full bg-white border border-soli rounded-xl text-sm focus-within:border-soli-action focus-within:ring-1 focus-within:ring-soli-action hover:bg-soli-action/5 hover:border-soli-action cursor-pointer transition-all shadow-sm">
+            <input type="checkbox"
+                class="shrink-0 mt-0.5 border-gray-200 rounded text-soli-action focus:ring-soli-action size-5"
+                id="multi-choice-1" checked>
+            <span class="text-sm text-soli-dark ms-3 font-semibold">Option A (Correcte)</span>
+        </label>
+
+        <label for="multi-choice-2"
+            class="max-w-xs flex p-3 w-full bg-white border border-soli rounded-xl text-sm focus-within:border-soli-action focus-within:ring-1 focus-within:ring-soli-action hover:bg-soli-action/5 hover:border-soli-action cursor-pointer transition-all shadow-sm">
+            <input type="checkbox"
+                class="shrink-0 mt-0.5 border-gray-200 rounded text-soli-action focus:ring-soli-action size-5"
+                id="multi-choice-2">
+            <span class="text-sm text-soli-dark ms-3 font-semibold">Option B (Incomplète)</span>
+        </label>
+
+        <label for="multi-choice-3"
+            class="max-w-xs flex p-3 w-full bg-white border border-soli rounded-xl text-sm focus-within:border-soli-action focus-within:ring-1 focus-within:ring-soli-action hover:bg-soli-action/5 hover:border-soli-action cursor-pointer transition-all shadow-sm">
+            <input type="checkbox"
+                class="shrink-0 mt-0.5 border-gray-200 rounded text-soli-action focus:ring-soli-action size-5"
+                id="multi-choice-3" checked>
+            <span class="text-sm text-soli-dark ms-3 font-semibold">Option C (Correcte)</span>
+        </label>
+    </div>
+</body>
+
+</html>

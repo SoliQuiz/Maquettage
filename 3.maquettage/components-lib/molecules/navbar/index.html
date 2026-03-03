@@ -3,84 +3,59 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Molécule: Navbar - SoliQuiz</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap"
-        rel="stylesheet">
-    <script>tailwind.config = { theme: { extend: { colors: { primary: { 50: '#eef2ff', 500: '#6366f1', 600: '#4f46e5' }, secondary: { 500: '#14b8a6' } }, fontFamily: { sans: ['Inter', 'sans-serif'], heading: ['Outfit', 'sans-serif'] } } } }</script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.js"></script>
+    <link rel="stylesheet" href="../../../charte-graphique/style.css">
 </head>
 
-<body class="bg-slate-50 font-sans">
+<body class="p-4">
+    <!-- Navbar (Component from Preline UI) -->
+    <header
+        class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white border-b border-soli text-sm py-2.5 sm:py-4">
+        <nav class="max-w-7xl flex basis-full items-center w-full mx-auto px-4 sm:px-6 lg:px-8" aria-label="Global">
+            <div class="me-5 md:me-8">
+                <a class="flex-none text-xl font-bold text-soli-dark" href="#" aria-label="Brand">Soli<span
+                        class="text-soli-action">Quiz</span></a>
+            </div>
 
-    <!-- Navbar Étudiant -->
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
-        <nav role="navigation" aria-label="Navigation principale"
-            class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-            <!-- Logo atom -->
-            <a href="#" class="inline-flex items-center gap-2 group" aria-label="SoliQuiz - Accueil">
-                <div
-                    class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center">
-                    <span class="text-white font-heading font-bold text-sm">SQ</span>
-                </div>
-                <span class="font-heading font-bold text-lg text-slate-900">SoliQuiz</span>
-            </a>
-
-            <!-- Links -->
-            <div class="hidden md:flex items-center gap-1">
-                <a href="#" aria-current="page"
-                    class="px-4 py-2 text-sm font-semibold text-primary-600 bg-primary-50 rounded-lg transition-colors">Tableau
-                    de bord</a>
-                <a href="#"
-                    class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors">Historique</a>
+            <div class="flex items-center gap-x-2 ms-auto py-1 md:ps-6 md:order-3">
                 <button type="button"
-                    class="ml-4 px-4 py-2 text-sm font-medium text-slate-500 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors">
-                    Déconnexion
+                    class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-soli bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none transition-all duration-300">
+                    Connexion
                 </button>
-            </div>
 
-            <!-- Mobile toggle -->
-            <button type="button" class="md:hidden p-2 rounded-lg text-slate-500 hover:bg-slate-100 transition-colors"
-                aria-label="Ouvrir le menu">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-        </nav>
-    </header>
-
-    <div class="p-8 text-slate-400 text-sm text-center">↑ Navbar Étudiant</div>
-
-    <!-- Navbar Formateur (variante) -->
-    <header class="sticky top-0 z-50 bg-slate-900 border-b border-slate-700 shadow-md">
-        <nav role="navigation" aria-label="Navigation formateur"
-            class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-            <a href="#" class="inline-flex items-center gap-2 group">
-                <div
-                    class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center">
-                    <span class="text-white font-heading font-bold text-sm">SQ</span>
+                <div class="md:hidden">
+                    <button type="button"
+                        class="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-lg border border-soli font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-soli-action transition-all text-sm"
+                        data-hs-collapse="#navbar-alignment" aria-controls="navbar-alignment"
+                        aria-label="Toggle navigation">
+                        <svg class="hs-collapse-open:hidden w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" x2="21" y1="6" y2="6" />
+                            <line x1="3" x2="21" y1="12" y2="12" />
+                            <line x1="3" x2="21" y1="18" y2="18" />
+                        </svg>
+                        <svg class="hs-collapse-open:block hidden w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 6 6 18" />
+                            <path d="m6 6 12 12" />
+                        </svg>
+                    </button>
                 </div>
-                <span class="font-heading font-bold text-lg text-white">SoliQuiz <span
-                        class="text-slate-400 font-normal text-sm ml-1">Formateur</span></span>
-            </a>
-            <div class="hidden md:flex items-center gap-1">
-                <a href="#" aria-current="page"
-                    class="px-4 py-2 text-sm font-semibold text-white bg-white/10 rounded-lg transition-colors">Tableau
-                    de bord</a>
-                <a href="#"
-                    class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors">Bibliothèque
-                    QCM</a>
-                <a href="#"
-                    class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors">Suivis
-                    Classes</a>
-                <button type="button"
-                    class="ml-4 px-3 py-2 text-xs font-medium text-slate-400 hover:text-red-400 hover:bg-red-900/20 rounded-lg transition-colors">Déconnexion</button>
+            </div>
+
+            <div id="navbar-alignment"
+                class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block md:w-auto md:basis-auto md:order-2">
+                <div class="flex flex-col gap-5 mt-5 md:flex-row md:items-center md:mt-0 md:ps-5">
+                    <a class="font-medium text-soli-action" href="#" aria-current="page">Accueil</a>
+                    <a class="font-medium text-gray-600 hover:text-soli-action transition-colors" href="#">Mes QCM</a>
+                    <a class="font-medium text-gray-600 hover:text-soli-action transition-colors" href="#">Résultats</a>
+                </div>
             </div>
         </nav>
     </header>
-    <div class="p-8 text-slate-400 text-sm text-center">↑ Navbar Formateur (variante sombre)</div>
-
 </body>
 
 </html>

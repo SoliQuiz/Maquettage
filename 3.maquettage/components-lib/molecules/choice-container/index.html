@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.js"></script>
+    <link rel="stylesheet" href="../../../charte-graphique/style.css">
+</head>
+
+<body class="p-4">
+    <!-- Choice Group (Preline UI Radio Group) -->
+    <div class="grid space-y-3">
+        <label
+            class="px-2 py-0.5 bg-gray-100 text-gray-600 text-[10px] font-bold rounded uppercase border border-gray-200 mb-2 w-fit">🔘
+            Choix Unique</label>
+
+        <label for="choice-1"
+            class="max-w-xs flex p-4 w-full bg-white border border-soli rounded-xl text-sm focus-within:border-soli-action focus-within:ring-1 focus-within:ring-soli-action hover:bg-soli-action/5 hover:border-soli-action cursor-pointer transition-all shadow-sm">
+            <input type="radio" name="quiz-choice"
+                class="shrink-0 mt-0.5 border-gray-300 rounded-full text-soli-action focus:ring-soli-action size-5"
+                id="choice-1" checked>
+            <span class="text-sm text-soli-dark ms-3 font-semibold">O(n log n)</span>
+        </label>
+
+        <label for="choice-2"
+            class="max-w-xs flex p-4 w-full bg-white border border-soli rounded-xl text-sm focus-within:border-soli-action focus-within:ring-1 focus-within:ring-soli-action hover:bg-soli-action/5 hover:border-soli-action cursor-pointer transition-all shadow-sm">
+            <input type="radio" name="quiz-choice"
+                class="shrink-0 mt-0.5 border-gray-300 rounded-full text-soli-action focus:ring-soli-action size-5"
+                id="choice-2">
+            <span class="text-sm text-soli-dark ms-3 font-semibold">O(n²)</span>
+        </label>
+    </div>
+</body>
+
+</html>

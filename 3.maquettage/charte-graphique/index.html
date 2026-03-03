@@ -1,126 +1,165 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charte Graphique - SoliQuiz</title>
+    <title>SoliQuiz - Charte Graphique</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            50: '#eef2ff', 100: '#e0e7ff', 200: '#c7d2fe', 300: '#a5b4fc', 400: '#818cf8',
-                            500: '#6366f1', 600: '#4f46e5', 700: '#4338ca', 800: '#3730a3', 900: '#312e81',
-                        },
-                        secondary: {
-                            50: '#f0fdfa', 100: '#ccfbf1', 500: '#14b8a6', 600: '#0d9488', 900: '#134e4a'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        heading: ['Outfit', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-slate-50 text-slate-800 min-h-screen p-8">
 
-    <div class="max-w-5xl mx-auto bg-white p-10 rounded-2xl shadow-sm border border-slate-200">
-        
-        <header class="mb-12 border-b border-slate-200 pb-6">
-            <h1 class="text-4xl font-heading font-bold text-slate-900 mb-2">Charte Graphique</h1>
-            <p class="text-lg text-slate-500">Design System pour le projet <strong>SoliQuiz</strong>.</p>
-        </header>
+<body class="p-4 md:p-10">
 
-        <!-- TYPOGRAPHIE -->
-        <section class="mb-14">
-            <h2 class="text-2xl font-heading font-semibold mb-6 flex items-center"><span class="bg-primary-100 text-primary-700 w-8 h-8 rounded flex items-center justify-center mr-3 text-sm">Aa</span> Typographie</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="p-6 border border-slate-200 rounded-xl bg-slate-50">
-                    <p class="text-sm font-semibold text-slate-500 uppercase tracking-widest mb-4">Font Heading (Titres)</p>
-                    <p class="text-5xl font-heading font-bold mb-2 text-slate-900">Outfit</p>
-                    <p class="font-heading font-semibold text-2xl mb-1 text-slate-800">Ceci est un sous-titre H2</p>
-                    <p class="font-heading font-medium text-lg text-slate-700">Ceci est un titre H3 pour structurer</p>
-                </div>
-                
-                <div class="p-6 border border-slate-200 rounded-xl bg-slate-50">
-                    <p class="text-sm font-semibold text-slate-500 uppercase tracking-widest mb-4">Font Sans (Corps de texte)</p>
-                    <p class="text-5xl font-sans font-medium mb-2 text-slate-800">Inter</p>
-                    <p class="font-sans text-base leading-relaxed text-slate-600 mb-2">La police de corps de texte est conçue pour être extrêmement lisible, même sur de petits écrans (mobile-first). Elle limite la fatigue cognitive lors des QCM.</p>
-                    <p class="font-sans text-sm text-slate-500">Exemple de petit texte (mentions légales, aides).</p>
-                </div>
-            </div>
-        </section>
+    <header class="mb-12 border-b border-soli pb-6 flex justify-between items-center">
+        <div>
+            <h1 class="text-3xl font-bold text-soli-dark uppercase tracking-tight">Soli<span
+                    class="text-soli-action">Quiz</span></h1>
+            <p class="text-soli-muted">Design System — Version 1.0 (Inspiration SoliLMS)</p>
+        </div>
+        <div class="hidden md:block">
+            <span class="px-3 py-1 bg-soli-dark text-white rounded-full text-xs font-bold">ALPHA</span>
+        </div>
+    </header>
 
-        <!-- COULEURS -->
-        <section class="mb-14">
-            <h2 class="text-2xl font-heading font-semibold mb-6 flex items-center"><span class="bg-primary-100 text-primary-700 w-8 h-8 rounded flex items-center justify-center mr-3 text-sm">🎨</span> Couleurs</h2>
-            
-            <!-- Primary -->
-            <div class="mb-8">
-                <h3 class="text-lg font-semibold mb-3">Primary (Indigo - Actions principales)</h3>
-                <div class="flex flex-wrap gap-4">
-                    <div class="w-24"><div class="h-16 rounded-lg bg-primary-50 shadow-inner mb-2 border border-slate-100"></div><p class="text-xs text-center font-mono">50</p></div>
-                    <div class="w-24"><div class="h-16 rounded-lg bg-primary-100 shadow-inner mb-2 border border-slate-100"></div><p class="text-xs text-center font-mono">100</p></div>
-                    <div class="w-24"><div class="h-16 rounded-lg bg-primary-300 shadow-inner mb-2"></div><p class="text-xs text-center font-mono">300</p></div>
-                    <div class="w-24"><div class="h-16 rounded-lg bg-primary-500 shadow-md mb-2 flex items-center justify-center"><span class="text-white text-xs font-bold">BASE</span></div><p class="text-xs text-center font-mono font-bold text-primary-600">500</p></div>
-                    <div class="w-24"><div class="h-16 rounded-lg bg-primary-700 shadow-inner mb-2"></div><p class="text-xs text-center font-mono">700</p></div>
-                    <div class="w-24"><div class="h-16 rounded-lg bg-primary-900 shadow-inner mb-2"></div><p class="text-xs text-center font-mono">900</p></div>
-                </div>
-            </div>
+    <main class="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
-            <!-- Secondary -->
-            <div class="mb-8">
-                <h3 class="text-lg font-semibold mb-3">Secondary (Teal - Accents)</h3>
-                <div class="flex flex-wrap gap-4">
-                    <div class="w-24"><div class="h-16 rounded-lg bg-secondary-50 shadow-inner mb-2 border border-slate-100"></div><p class="text-xs text-center font-mono">50</p></div>
-                    <div class="w-24"><div class="h-16 rounded-lg bg-secondary-100 shadow-inner mb-2 border border-slate-100"></div><p class="text-xs text-center font-mono">100</p></div>
-                    <div class="w-24"><div class="h-16 rounded-lg bg-secondary-500 shadow-md mb-2 flex items-center justify-center"><span class="text-white text-xs font-bold">BASE</span></div><p class="text-xs text-center font-mono font-bold text-secondary-600">500</p></div>
-                    <div class="w-24"><div class="h-16 rounded-lg bg-secondary-900 shadow-inner mb-2"></div><p class="text-xs text-center font-mono">900</p></div>
-                </div>
-            </div>
-
-            <!-- Neutrals -->
-            <div class="mb-8">
-                <h3 class="text-lg font-semibold mb-3">Neutrals (Slate - Typographie et structure)</h3>
-                <div class="flex flex-wrap gap-4">
-                    <div class="w-24"><div class="h-16 rounded-lg bg-slate-50 shadow-inner mb-2 border border-slate-200"></div><p class="text-xs text-center font-mono">50 (BG)</p></div>
-                    <div class="w-24"><div class="h-16 rounded-lg bg-slate-200 shadow-inner mb-2"></div><p class="text-xs text-center font-mono">200 (Borders)</p></div>
-                    <div class="w-24"><div class="h-16 rounded-lg bg-slate-500 shadow-inner mb-2"></div><p class="text-xs text-center font-mono">500 (Muted)</p></div>
-                    <div class="w-24"><div class="h-16 rounded-lg bg-slate-800 shadow-inner mb-2"></div><p class="text-xs text-center font-mono">800 (Text)</p></div>
-                    <div class="w-24"><div class="h-16 rounded-lg bg-slate-900 shadow-inner mb-2"></div><p class="text-xs text-center font-mono">900 (Titles)</p></div>
-                </div>
-            </div>
-
-            <!-- Semantics -->
-            <div>
-                <h3 class="text-lg font-semibold mb-3">Sémantique (Feedback)</h3>
-                <div class="flex flex-wrap gap-4">
-                    <div class="w-32"><div class="h-16 rounded-lg bg-green-500 shadow-sm mb-2 flex flex-col items-center justify-center"><span class="text-white text-xs font-bold">SUCCESS</span></div></div>
-                    <div class="w-32"><div class="h-16 rounded-lg bg-red-500 shadow-sm mb-2 flex flex-col items-center justify-center"><span class="text-white text-xs font-bold">ERROR</span></div></div>
-                    <div class="w-32"><div class="h-16 rounded-lg bg-amber-500 shadow-sm mb-2 flex flex-col items-center justify-center"><span class="text-white text-xs font-bold">WARNING</span></div></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- COMPOSANTS BASIQUES -->
+        <!-- Palette de Couleurs -->
         <section>
-            <h2 class="text-2xl font-heading font-semibold mb-6 flex items-center"><span class="bg-primary-100 text-primary-700 w-8 h-8 rounded flex items-center justify-center mr-3 text-sm">🧩</span> Boutons & UI Elements</h2>
-            
-            <div class="flex flex-wrap gap-6 items-center bg-slate-50 p-6 rounded-xl border border-slate-200">
-                <button class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-5 rounded-lg transition-colors shadow-sm">Bouton Primaire</button>
-                <button class="bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 font-medium py-2 px-5 rounded-lg transition-colors shadow-sm">Bouton Secondaire</button>
-                <div class="bg-green-100 text-green-700 border border-green-200 px-3 py-1 rounded-full text-sm font-medium">Badge Succès</div>
-                <div class="bg-primary-100 text-primary-700 border border-primary-200 px-3 py-1 rounded-full text-sm font-medium">Badge Module</div>
+            <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                <span class="w-2 h-6 bg-soli-action rounded-full"></span>
+                Palette Chromatique
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="space-y-2">
+                    <div class="h-16 w-full rounded-lg bg-soli-dark shadow-inner"></div>
+                    <p class="text-xs font-bold">SoliDark<br><span class="text-soli-muted font-normal">#0E4B5E</span>
+                    </p>
+                </div>
+                <div class="space-y-2">
+                    <div class="h-16 w-full rounded-lg bg-soli-action shadow-inner"></div>
+                    <p class="text-xs font-bold">SoliAction<br><span class="text-soli-muted font-normal">#00A8E8</span>
+                    </p>
+                </div>
+                <div class="space-y-2">
+                    <div class="h-16 w-full rounded-lg bg-soli-success shadow-inner"></div>
+                    <p class="text-xs font-bold">Success<br><span class="text-soli-muted font-normal">#28A745</span></p>
+                </div>
+                <div class="space-y-2">
+                    <div class="h-16 w-full rounded-lg bg-soli-warning shadow-inner"></div>
+                    <p class="text-xs font-bold">Warning<br><span class="text-soli-muted font-normal">#FFB800</span></p>
+                </div>
             </div>
         </section>
 
-    </div>
+        <!-- Typographie -->
+        <section>
+            <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                <span class="w-2 h-6 bg-soli-action rounded-full"></span>
+                Typographie (Inter)
+            </h2>
+            <div class="space-y-4 card-soli p-6">
+                <div>
+                    <span class="text-xs font-bold text-soli-muted uppercase truncate block mb-1">H1 - Titre de
+                        Page</span>
+                    <p class="text-3xl font-bold text-soli-dark">Bienvenue sur SoliQuiz</p>
+                </div>
+                <div>
+                    <span class="text-xs font-bold text-soli-muted uppercase truncate block mb-1">H2 - Section</span>
+                    <p class="text-xl font-semibold">Question 1 : Algorithmes</p>
+                </div>
+                <div>
+                    <span class="text-xs font-bold text-soli-muted uppercase truncate block mb-1">Body - Texte
+                        standard</span>
+                    <p class="text-base text-soli-text-primary">L'avez-vous compris ? Répondez aux questions pour
+                        valider votre session quotidienne.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Composants & États -->
+        <section class="lg:col-span-2">
+            <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                <span class="w-2 h-6 bg-soli-action rounded-full"></span>
+                Composants & États
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Boutons -->
+                <div class="space-y-4">
+                    <h3 class="text-sm font-bold text-soli-muted uppercase italic mb-4">Interactions</h3>
+                    <div class="flex flex-col gap-3">
+                        <button class="btn-soli-primary">Action Principale</button>
+                        <button class="btn-soli-dark">Action Secondaire</button>
+                        <button
+                            class="px-4 py-2 border border-soli rounded-lg font-medium hover:bg-white hover:shadow-sm transition-all">Lien
+                            / Annuler</button>
+                    </div>
+                </div>
+
+                <!-- Formulaires -->
+                <div class="space-y-4">
+                    <h3 class="text-sm font-bold text-soli-muted uppercase italic mb-4">Saisie de données</h3>
+                    <div class="space-y-3">
+                        <div class="flex flex-col gap-1">
+                            <label class="text-xs font-bold text-soli-dark">Nom d'utilisateur</label>
+                            <input type="text" placeholder="ex: jdoe" class="input-soli">
+                        </div>
+                        <div class="flex flex-col gap-2 pt-2">
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <div
+                                    class="w-5 h-5 rounded-full border-2 border-soli group-hover:border-soli-action flex items-center justify-center">
+                                    <div class="w-2.5 h-2.5 rounded-full bg-soli-action scale-0 transition-transform">
+                                    </div>
+                                </div>
+                                <span class="text-sm">Choix Unique (Radio)</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <div
+                                    class="w-5 h-5 rounded border-2 border-soli group-hover:border-soli-action flex items-center justify-center">
+                                    <svg class="w-3.5 h-3.5 text-soli-action scale-0 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-sm">Choix Multiple (Checkbox)</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feedback & Indicators -->
+                <div class="space-y-4">
+                    <h3 class="text-sm font-bold text-soli-muted uppercase italic mb-4">Alertes & Statuts</h3>
+                    <div class="space-y-3">
+                        <div
+                            class="px-3 py-2 bg-green-50 text-green-700 border border-green-200 rounded-lg text-xs font-medium flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-soli-success animate-pulse"></span>
+                            Réponse correcte !
+                        </div>
+                        <div
+                            class="px-3 py-2 bg-yellow-50 text-yellow-700 border border-yellow-200 rounded-lg text-xs font-medium flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-soli-warning"></span>
+                            Timer : 02:00 restant
+                        </div>
+                        <div
+                            class="px-3 py-2 bg-red-50 text-red-700 border border-red-200 rounded-lg text-xs font-medium flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-soli-danger"></span>
+                            Attention : Erreur de connexion
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="mt-20 pt-6 border-t border-soli text-center">
+        <p class="text-soli-muted text-xs italic">SoliQuiz Design System - Inspired by Solicode Ecosystem</p>
+    </footer>
+
 </body>
+
 </html>

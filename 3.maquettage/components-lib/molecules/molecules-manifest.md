@@ -1,17 +1,14 @@
-# Molecules Manifest — SoliQuiz
+# Manifeste des Molécules
 
-> Registre des molécules créées dans `components-lib/molecules/`.
+Ce fichier recense toutes les molécules (assemblages d'atomes) créées pour le projet SoliQuiz via Preline UI.
 
-| # | Nom | Dossier | Atoms utilisés | Pages d'utilisation |
-|---|-----|---------|----------------|---------------------|
-| 1 | **navbar** | `molecules/navbar/` | logo, nav-link, button | Toutes les pages |
-| 2 | **auth-card** | `molecules/auth-card/` | logo (large), title, input, button, nav-link | authentification |
-| 3 | **kpi-card** | `molecules/kpi-card/` | title, text, icon (SVG inline) | formateur-dashboard, admin-global |
-| 4 | **card-qcm** | `molecules/card-qcm/` | badge, title, text, button | etudiant-dashboard |
-| 5 | **evaluation-header** | `molecules/evaluation-header/` | logo, title, timer, badge | etudiant-evaluation |
-| 6 | **question-block** | `molecules/question-block/` | title, text, radio-checkbox | etudiant-evaluation |
-| 7 | **result-summary** | `molecules/result-summary/` | title, text | etudiant-resultats |
-| 8 | **feedback-item** | `molecules/feedback-item/` | title, text, badge, blockquote | etudiant-resultats |
-| 9 | **alert-banner** | `molecules/alert-banner/` | icon (SVG inline), text | formateur-dashboard |
-| 10 | **data-table-actions** | `molecules/data-table-actions/` | text, badge, icon-button | formateur-bibliotheque, admin-global |
-| 11 | **footer-standard** | `molecules/footer-standard/` | text, nav-link | Toutes les pages |
+| Nom | Emplacement | Atomes Utilisés | Description |
+|---|---|---|---|
+| `form-group` | `molecules/form-group/` | `label`, `input-text` | Groupe label + input vertical |
+| `login-form` | `molecules/login-form/` | `heading-1`, `form-group`, `button-primary`, `alert-error` | Formulaire de connexion complet |
+| `navbar` | `molecules/navbar/` | `logo`, `nav-link`, `button` | Barre de navigation responsive |
+| `stat-card` | `molecules/stat-card/` | `icon`, `text` | Carte d'indicateur statistique |
+| `activity-list` | `molecules/activity-list/` | `table`, `badge` | Tableau des activités récentes |
+| `action-card` | `molecules/action-card/` | `card`, `icon`, `link` | Carte interactive d'action rapide |
+| `quiz-header` | `molecules/quiz-header/` | `progress`, `timer` | En-tête de quiz avec barre de vie |
+| `choice-container` | `molecules/choice-container/` | `radio`, `group` | Grille de choix de réponses |

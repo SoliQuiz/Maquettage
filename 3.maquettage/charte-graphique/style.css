@@ -1,71 +1,98 @@
-/* style.css - Variables CSS (Design Tokens) pour SoliQuiz */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  /* =========================================
-     1. TYPOGRAPHIE
-  ========================================= */
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-heading: 'Outfit', system-ui, -apple-system, sans-serif;
-
-  /* =========================================
-     2. PALETTE DE COULEURS (HSL)
-  ========================================= */
-
-  /* Primary (Indigo) - Base: hsl(238, 81%, 67%) correspond à #6366f1 */
-  --color-primary-50:  hsl(226, 100%, 97%);
-  --color-primary-100: hsl(226, 100%, 94%);
-  --color-primary-200: hsl(228, 96%, 89%);
-  --color-primary-300: hsl(229, 93%, 82%);
-  --color-primary-400: hsl(234, 89%, 74%);
-  --color-primary-500: hsl(238, 81%, 67%); /* BASE */
-  --color-primary-600: hsl(243, 75%, 59%);
-  --color-primary-700: hsl(244, 55%, 51%);
-  --color-primary-800: hsl(244, 54%, 41%);
-  --color-primary-900: hsl(243, 46%, 35%);
-
-  /* Secondary (Teal) - Base: hsl(173, 80%, 40%) correspond à #14b8a6 */
-  --color-secondary-50:  hsl(166, 76%, 97%);
-  --color-secondary-100: hsl(167, 85%, 89%);
-  --color-secondary-500: hsl(173, 80%, 40%); /* BASE */
-  --color-secondary-600: hsl(174, 83%, 32%);
-  --color-secondary-900: hsl(175, 42%, 16%);
-
-  /* Neutrals (Slate) */
-  --color-slate-50:  hsl(210, 40%, 98%);
-  --color-slate-100: hsl(210, 38%, 95%);
-  --color-slate-200: hsl(214, 32%, 91%);
-  --color-slate-300: hsl(213, 27%, 84%);
-  --color-slate-400: hsl(215, 20%, 65%);
-  --color-slate-500: hsl(215, 16%, 47%); /* Texes secondaires */
-  --color-slate-600: hsl(215, 19%, 35%);
-  --color-slate-700: hsl(215, 25%, 27%);
-  --color-slate-800: hsl(215, 28%, 17%); /* Textes principaux */
-  --color-slate-900: hsl(222, 47%, 11%); /* Titres forts */
-
-  /* Sémantique */
-  --color-success: hsl(142, 71%, 45%); /* Vert */
-  --color-error:   hsl(0, 84%, 60%);   /* Rouge */
-  --color-warning: hsl(38, 92%, 50%);  /* Orange */
-  --color-info:    hsl(221, 83%, 53%); /* Bleu */
-
-  /* =========================================
-     3. BORDURES & RADIUS
-  ========================================= */
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
+    --soli-dark: #0E4B5E;
+    --soli-action: #00A8E8;
+    --soli-success: #28A745;
+    --soli-warning: #FFB800;
+    --soli-danger: #DC3545;
+    --soli-bg: #F8FAFC;
+    --soli-surface: #FFFFFF;
+    --soli-border: #E2E8F0;
+    --soli-text-primary: #1E293B;
+    --soli-text-muted: #64748B;
 }
 
 body {
-  font-family: var(--font-sans);
-  background-color: var(--color-slate-50);
-  color: var(--color-slate-800);
+    font-family: 'Inter', sans-serif;
+    background-color: var(--soli-bg);
+    color: var(--soli-text-primary);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  color: var(--color-slate-900);
+.bg-soli-dark {
+    background-color: var(--soli-dark);
+}
+
+.bg-soli-action {
+    background-color: var(--soli-action);
+}
+
+.bg-soli-success {
+    background-color: var(--soli-success);
+}
+
+.bg-soli-warning {
+    background-color: var(--soli-warning);
+}
+
+.bg-soli-danger {
+    background-color: var(--soli-danger);
+}
+
+.text-soli-dark {
+    color: var(--soli-dark);
+}
+
+.text-soli-action {
+    color: var(--soli-action);
+}
+
+.text-soli-muted {
+    color: var(--soli-text-muted);
+}
+
+.border-soli {
+    border-color: var(--soli-border);
+}
+
+.card-soli {
+    background: var(--soli-surface);
+    border: 1px solid var(--soli-border);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.btn-soli-primary {
+    background-color: var(--soli-action);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-soli-primary:hover {
+    filter: brightness(1.1);
+}
+
+.btn-soli-dark {
+    background-color: var(--soli-dark);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.input-soli {
+    border: 1px solid var(--soli-border);
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-soli:focus {
+    border-color: var(--soli-action);
+    box-shadow: 0 0 0 3px rgba(0, 168, 232, 0.1);
 }

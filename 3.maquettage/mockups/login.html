@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Accédez à votre espace SoliQuiz pour passer ou gérer vos évaluations pédagogiques.">
+    <title>Connexion - SoliQuiz</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.js"></script>
+    <link rel="stylesheet" href="../charte-graphique/style.css">
+</head>
+
+<body class="bg-gray-50 h-full flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
+    <!-- Login Form Wrapper (Centered) -->
+    <div class="w-full max-w-md">
+        <!-- Reusing Login Form Logic/Structure with Preline -->
+        <div class="p-4 sm:p-7 bg-white border border-soli rounded-xl shadow-sm">
+            <div class="text-center mb-10">
+                <h1 class="block text-3xl font-bold text-soli-dark">Soli<span class="text-soli-action">Quiz</span></h1>
+                <p class="mt-2 text-sm text-soli-muted">
+                    Veuillez vous authentifier pour accéder à votre espace pédagogique.
+                </p>
+            </div>
+
+            <div class="mt-5">
+                <!-- Form -->
+                <form action="dashboard.html">
+                    <div class="grid gap-y-4">
+                        <!-- Identifiant -->
+                        <div class="space-y-2">
+                            <label for="username" class="block text-sm font-medium text-soli-dark">Identifiant</label>
+                            <input type="text" id="username" name="username"
+                                class="py-3 px-4 block w-full border-soli border rounded-lg text-sm focus:border-soli-action focus:ring-soli-action shadow-sm transition-all duration-300"
+                                placeholder="ex: jdoe" required>
+                        </div>
+
+                        <!-- Mot de passe -->
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <label for="password" class="block text-sm font-medium text-soli-dark">Mot de
+                                    passe</label>
+                            </div>
+                            <input type="password" id="password" name="password"
+                                class="py-3 px-4 block w-full border-soli border rounded-lg text-sm focus:border-soli-action focus:ring-soli-action shadow-sm transition-all duration-300"
+                                placeholder="••••••••" required>
+                        </div>
+
+                        <!-- Forgot Password (Optional/Muted) -->
+                        <div class="flex items-center">
+                            <div class="flex">
+                                <input id="remember-me" name="remember-me" type="checkbox"
+                                    class="shrink-0 mt-0.5 border-gray-200 rounded text-soli-action focus:ring-soli-action">
+                            </div>
+                            <div class="ms-3">
+                                <label for="remember-me" class="text-sm text-soli-muted">Se souvenir de moi</label>
+                            </div>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-soli-action text-white hover:bg-soli-dark disabled:opacity-50 disabled:pointer-events-none transition-all duration-300">
+                            Se connecter
+                        </button>
+                    </div>
+                </form>
+                <!-- End Form -->
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-soli text-center">
+                <p class="text-xs text-soli-muted italic">
+                    Besoin d'aide ? Contactez le support technique de votre centre.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

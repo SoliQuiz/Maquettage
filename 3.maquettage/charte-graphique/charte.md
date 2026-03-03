@@ -1,58 +1,73 @@
 # Charte Graphique : SoliQuiz
 
-## 1. Identité Visuelle
-- **Nom du projet** : SoliQuiz
-- **Ton** : Professionnel, clair, pédagogique et rassurant.
-- **Style Visuel** : Interface claire, moderne, étudiée pour réduire la fatigue cognitive lors des évaluations (mobile-first).
+> **Inspiration** : SoliLMS (Professional, Clean, Data-centric)
+> **Ton** : Professionnel, Pédagogique, Rassurant
+> **Priorité** : Lisibilité & Mobile-First
 
-## 2. Typographie
-- **Police Principale (Body & UI)** : `Inter` (sans-serif) - Excellente lisibilité sur mobile.
-- **Police Secondaire (Titres / Accents)** : `Outfit` (sans-serif) - Apporte une touche moderne et dynamique.
+---
 
-## 3. Palette de Couleurs (Couleurs Tailwind)
+## 🎨 Palette de Couleurs
 
-### Primary (Indigo Pédagogique - Rassurant et Focus)
-- `primary-50` : `#eef2ff`
-- `primary-100`: `#e0e7ff`
-- `primary-500`: `#6366f1` (Base de la marque, boutons principaux)
-- `primary-600`: `#4f46e5` (Hover)
-- `primary-900`: `#312e81`
+| Rôle | Couleur | Hex | Usage |
+|---|---|---|---|
+| **Primary (SoliDark)** | ![#0E4B5E](https://via.placeholder.com/15/0E4B5E/0E4B5E.png) | `#0E4B5E` | Sidebar, Titres, Identité forte |
+| **Secondary (SoliAction)** | ![#00A8E8](https://via.placeholder.com/15/00A8E8/00A8E8.png) | `#00A8E8` | Boutons d'action, Liens, Focus |
+| **Success** | ![#28A745](https://via.placeholder.com/15/28A745/28A745.png) | `#28A745` | Scores élevés, Validations, Feedback positif |
+| **Warning** | ![#FFB800](https://via.placeholder.com/15/FFB800/FFB800.png) | `#FFB800` | À valider, Timer (alerte), Attention |
+| **Danger** | ![#DC3545](https://via.placeholder.com/15/DC3545/DC3545.png) | `#DC3545` | Erreurs, Scores bas, Alertes critiques |
+| **Background** | ![#F8FAFC](https://via.placeholder.com/15/F8FAFC/F8FAFC.png) | `#F8FAFC` | Fond de page neutre |
+| **Surface** | ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/FFFFFF.png) | `#FFFFFF` | Cards, Blocs de contenu, Inputs |
+| **Border** | ![#E2E8F0](https://via.placeholder.com/15/E2E8F0/E2E8F0.png) | `#E2E8F0` | Séparateurs, Bordures de cards |
 
-### Secondary (Teal - Doux et Rafraîchissant)
-- `secondary-50`: `#f0fdfa`
-- `secondary-500`: `#14b8a6` (Accents, illustrations)
-- `secondary-600`: `#0d9488`
+---
 
-### Neutrals (Slate - Typographie et contours)
-- `slate-50` : `#f8fafc` (Background général)
-- `slate-100`: `#f1f5f9` (Background cartes/composants)
-- `slate-200`: `#e2e8f0` (Bordures)
-- `slate-500`: `#64748b` (Textes secondaires, placeholders)
-- `slate-800`: `#1e293b` (Textes principaux)
-- `slate-900`: `#0f172a` (Titres)
+## ✍️ Typographie
 
-### Sémantique (Feedback direct)
-- **Success** : `#22c55e` (green-500) - Pour les bonnes réponses.
-- **Error** : `#ef4444` (red-500) - Pour les mauvaises réponses.
-- **Warning** : `#f59e0b` (amber-500) - Pour les alertes formateur.
+- **Police principale** : `Inter` (Sans-serif)
+  - *Alternative* : `system-ui`
+- **Échelle de tailles** :
+  - **H1 (Titre Page)** : 24px (Mobile) / 32px (Desktop) | Bold
+  - **H2 (Section/Question)** : 18px / 22px | Semibold
+  - **Body (Texte/Choix)** : 16px | Regular
+  - **Caption (Stats/Meta)** : 13px | Medium
 
-## 4. Configuration Tailwind (Extrait tailwind.config.js - Référence)
+---
+
+## ✨ Principes UI & Composants
+
+### 📱 Mobile-First
+- Largeur des boutons : 100% sur mobile.
+- Espacement minimal (Touch Target) : 44px.
+- Marges latérales : 16px (4rem).
+
+### 🧊 Formes & Ombres
+- **Border Radius** : `8px` (Standard) / `12px` (Cards).
+- **Shadows** : `sm` (Subtle) sur les cards pour la profondeur.
+- **Inputs** : Bordure légère `#E2E8F0`, focus `#00A8E8`.
+
+### 🔘 Système de Choix (Critique)
+- **Choix Unique** : Cercle (Radio) — Cercle plein au centre au focus.
+- **Choix Multiple** : Carré (Checkbox) — Crochet/Check au focus.
+- **Feedback** : Affichage vert (Juste) / Rouge (Faux) lors de la correction.
+
+---
+
+## 🛠️ Tokens CSS (Tailwind)
+
 ```javascript
 module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#eef2ff', 100: '#e0e7ff', 200: '#c7d2fe', 300: '#a5b4fc', 400: '#818cf8',
-          500: '#6366f1', 600: '#4f46e5', 700: '#4338ca', 800: '#3730a3', 900: '#312e81',
-        },
-        secondary: {
-          50: '#f0fdfa', 500: '#14b8a6', 600: '#0d9488'
+        soli: {
+          dark: '#0E4B5E',
+          action: '#00A8E8',
+          bg: '#F8FAFC',
+          border: '#E2E8F0'
         }
       },
-      fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        heading: ['Outfit', 'sans-serif'],
+      borderRadius: {
+        'soli': '8px',
       }
     }
   }

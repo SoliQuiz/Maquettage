@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Outil de création de questionnaires pédagogiques pour les formateurs SoliQuiz.">
+    <title>Créer un QCM - SoliQuiz</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.js"></script>
+    <link rel="stylesheet" href="../charte-graphique/style.css">
+</head>
+
+<body class="bg-gray-50 h-full flex flex-col font-sans">
+
+    <!-- Navbar (Admin/Formateur) -->
+    <header class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-soli-dark text-sm py-2.5 sm:py-4">
+        <nav class="max-w-7xl flex basis-full items-center w-full mx-auto px-4 sm:px-6 lg:px-8" aria-label="Global">
+            <div class="me-5 md:me-8">
+                <a class="flex-none text-xl font-bold text-white" href="dashboard.html" aria-label="Brand">Soli<span
+                        class="text-soli-action">Quiz</span></a>
+            </div>
+
+            <div class="flex items-center gap-x-2 ms-auto py-1 md:ps-6 md:order-3">
+                <div class="hs-dropdown relative inline-flex">
+                    <button id="hs-dropdown-avatar" type="button"
+                        class="hs-dropdown-toggle inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-white/10 bg-white/10 text-white shadow-sm hover:bg-white/20 transition-all duration-300">
+                        <img class="inline-block size-[38px] rounded-full"
+                            src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+                            alt="Avatar">
+                        <span class="hidden md:block font-medium px-2">Formateur</span>
+                    </button>
+                    <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-md rounded-lg p-2 mt-2 border border-soli"
+                        aria-labelledby="hs-dropdown-avatar">
+                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100"
+                            href="#">Profil</a>
+                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-red-600 hover:bg-red-50"
+                            href="login.html">Déconnexion</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="navbar-alignment"
+                class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block md:w-auto md:basis-auto md:order-2">
+                <div class="flex flex-col gap-5 mt-5 md:flex-row md:items-center md:mt-0 md:ps-5">
+                    <a class="font-medium text-white/70 hover:text-white" href="dashboard.html">Dashboard</a>
+                    <a class="font-medium text-soli-action" href="#" aria-current="page">Créer QCM</a>
+                    <a class="font-medium text-white/70 hover:text-white" href="#">Mes Contenus</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-1 overflow-y-auto">
+        <div class="max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+
+            <!-- Stepper (Preline) -->
+            <div class="mb-10">
+                <ul class="relative flex flex-row gap-x-2 max-w-xs mx-auto">
+                    <li class="flex items-center gap-x-2 shrink basis-0 flex-1 group">
+                        <div class="min-w-7 min-h-7 inline-flex justify-center items-center text-xs align-middle">
+                            <span
+                                class="size-7 flex justify-center items-center shrink-0 bg-soli-action font-medium text-white rounded-full">1</span>
+                        </div>
+                        <div class="ms-2">
+                            <span class="block text-sm font-medium text-soli-dark">Infos</span>
+                        </div>
+                        <div class="w-full h-px flex-1 bg-gray-200 group-last:hidden"></div>
+                    </li>
+                    <li class="flex items-center gap-x-2 shrink basis-0 flex-1 group">
+                        <div class="min-w-7 min-h-7 inline-flex justify-center items-center text-xs align-middle">
+                            <span
+                                class="size-7 flex justify-center items-center shrink-0 bg-gray-100 font-medium text-soli-muted rounded-full">2</span>
+                        </div>
+                        <div class="ms-2">
+                            <span class="block text-sm font-medium text-soli-muted">Questions</span>
+                        </div>
+                        <div class="w-full h-px flex-1 bg-gray-200 group-last:hidden"></div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Page Header -->
+            <div class="mb-8 overflow-hidden">
+                <h2 class="text-2xl font-bold text-soli-dark">Nouveau Questionnaire</h2>
+                <p class="text-soli-muted mt-1 italic text-sm">Étape 1 : Paramètres généraux du QCM.</p>
+            </div>
+
+            <!-- Form Content -->
+            <div
+                class="bg-white border border-soli rounded-2xl shadow-sm overflow-hidden animate-in fade-in slide-in-from-bottom-2">
+                <div class="p-6 md:p-8 space-y-8">
+
+                    <!-- Section A: Identité -->
+                    <div class="space-y-4">
+                        <h3
+                            class="text-sm font-bold text-soli-dark uppercase tracking-widest border-b border-soli pb-2">
+                            Identification</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="block text-sm font-semibold text-soli-dark">Titre de l'évaluation</label>
+                                <input type="text"
+                                    class="py-3 px-4 block w-full border-soli border rounded-xl text-sm focus:border-soli-action focus:ring-soli-action transition-all"
+                                    placeholder="ex: Algorithmes J05">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-semibold text-soli-dark">Catégorie / Module</label>
+                                <select
+                                    class="py-3 px-4 block w-full border-soli border rounded-xl text-sm focus:border-soli-action focus:ring-soli-action transition-all">
+                                    <option>Algorithmique</option>
+                                    <option>Frontend Development</option>
+                                    <option>Backend Development</option>
+                                    <option>Soft Skills</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section B: Configuration -->
+                    <div class="space-y-4 pt-4">
+                        <h3
+                            class="text-sm font-bold text-soli-dark uppercase tracking-widest border-b border-soli pb-2">
+                            Configuration</h3>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="space-y-2">
+                                <label class="block text-sm font-semibold text-soli-dark">Temps Limite (min)</label>
+                                <input type="number"
+                                    class="py-3 px-4 block w-full border-soli border rounded-xl text-sm focus:border-soli-action focus:ring-soli-action transition-all"
+                                    value="20">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-semibold text-soli-dark">Cohorte</label>
+                                <select
+                                    class="py-3 px-4 block w-full border-soli border rounded-xl text-sm focus:border-soli-action focus:ring-soli-action transition-all">
+                                    <option>SOLI-2026-A</option>
+                                    <option>SOLI-2026-B</option>
+                                </select>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-semibold text-soli-dark">Ordre Aléatoire</label>
+                                <div class="flex items-center mt-3">
+                                    <input type="checkbox" id="shuffle"
+                                        class="shrink-0 border-gray-300 rounded text-soli-action focus:ring-soli-action size-5">
+                                    <label for="shuffle" class="text-sm text-soli-muted ms-3">Activer</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 border-t border-soli px-6 py-4 flex justify-end gap-3">
+                    <button
+                        class="py-2 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-soli bg-white text-gray-700 shadow-sm hover:bg-gray-50 transition-all">Annuler</button>
+                    <button
+                        class="py-2.5 px-6 inline-flex items-center gap-x-2 text-sm font-bold rounded-xl border border-transparent bg-soli-action text-white hover:bg-soli-dark shadow-sm transition-all">
+                        Suivant : Questions
+                        <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-soli py-6">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-xs text-soli-muted italic">SoliQuiz Creator v1.0 — Module Formateur</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
