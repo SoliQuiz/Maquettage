@@ -14,80 +14,114 @@
 <body class="bg-slate-50 font-sans p-8 max-w-2xl mx-auto space-y-10">
 
     <!-- Question à choix UNIQUE (Radio) -->
-    <section aria-labelledby="q1-label">
+    <section
+        class="p-6 bg-white border border-gray-200 rounded-2xl shadow-sm dark:bg-neutral-900 dark:border-neutral-800">
         <div class="mb-5">
-            <span class="text-xs text-slate-400 font-medium uppercase tracking-widest">Question 2 / 10</span>
-            <h2 id="q1-label" class="font-heading font-semibold text-xl text-slate-900 mt-2 leading-snug">
+            <div class="flex items-center gap-x-2 mb-2">
+                <span
+                    class="size-5 flex items-center justify-center bg-blue-600 text-white rounded-full text-[10px] font-bold">2</span>
+                <span class="text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-neutral-500">Question 2
+                    / 10</span>
+            </div>
+            <h2 class="text-xl font-bold text-gray-800 dark:text-white">
                 Quelle méthode JavaScript permet de parcourir un tableau sans possibilité d'utiliser <code
-                    class="font-mono bg-slate-100 px-1 rounded text-base text-primary-600">break</code> ?
+                    class="font-mono bg-red-50 px-1.5 py-0.5 rounded text-red-600 dark:bg-red-900/20 dark:text-red-400">break</code>
+                ?
             </h2>
         </div>
 
-        <fieldset>
-            <legend
-                class="inline-flex items-center gap-2 text-sm font-semibold text-primary-700 bg-primary-50 border border-primary-100 rounded-lg px-3 py-1 mb-4">
-                <span class="w-2 h-2 rounded-full bg-primary-500"></span>
-                Sélectionnez UNE seule réponse
-            </legend>
-            <div class="space-y-3">
-                <label
-                    class="flex items-start gap-3 cursor-pointer p-4 rounded-xl border border-slate-200 bg-white hover:border-primary-400 hover:bg-primary-50 transition-all duration-150 group">
-                    <input type="radio" name="q1-radio" value="a"
-                        class="mt-0.5 h-5 w-5 text-primary-600 border-slate-300 focus:ring-primary-500 cursor-pointer" />
-                    <span class="text-sm text-slate-700 font-normal">for classique</span>
-                </label>
-                <label
-                    class="flex items-start gap-3 cursor-pointer p-4 rounded-xl border border-slate-200 bg-white hover:border-primary-400 hover:bg-primary-50 transition-all duration-150 group">
-                    <input type="radio" name="q1-radio" value="b"
-                        class="mt-0.5 h-5 w-5 text-primary-600 border-slate-300 focus:ring-primary-500 cursor-pointer" />
-                    <span class="text-sm text-slate-700 font-normal">for...of</span>
-                </label>
-                <label
-                    class="flex items-start gap-3 cursor-pointer p-4 rounded-xl border border-slate-200 bg-white hover:border-primary-400 hover:bg-primary-50 transition-all duration-150 group">
-                    <input type="radio" name="q1-radio" value="c"
-                        class="mt-0.5 h-5 w-5 text-primary-600 border-slate-300 focus:ring-primary-500 cursor-pointer" />
-                    <span class="text-sm text-slate-700 font-normal">forEach</span>
-                </label>
-            </div>
-        </fieldset>
+        <div
+            class="bg-blue-50 border border-blue-100 text-sm text-blue-800 rounded-xl p-3 dark:bg-blue-800/10 dark:border-blue-900 dark:text-blue-500 mb-6 flex gap-x-2">
+            <svg class="size-4 shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 16v-4" />
+                <path d="M12 8h.01" />
+            </svg>
+            <span><strong>Info:</strong> Sélectionnez UNE seule réponse.</span>
+        </div>
+
+        <div class="grid gap-y-3">
+            <label for="q1-a"
+                class="group flex p-3 w-full bg-white border border-gray-200 rounded-xl text-sm hover:border-blue-500 hover:bg-blue-50/50 dark:bg-neutral-900 dark:border-neutral-700 transition-all cursor-pointer">
+                <input type="radio" name="q1" id="q1-a"
+                    class="shrink-0 mt-0.5 size-4 border-gray-300 rounded-full text-blue-600 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500">
+                <span
+                    class="text-sm font-medium text-gray-600 ms-3 dark:text-neutral-400 group-hover:text-blue-700 transition-colors">for
+                    classique</span>
+            </label>
+
+            <label for="q1-b"
+                class="group flex p-3 w-full bg-white border border-gray-200 rounded-xl text-sm hover:border-blue-500 hover:bg-blue-50/50 dark:bg-neutral-900 dark:border-neutral-700 transition-all cursor-pointer">
+                <input type="radio" name="q1" id="q1-b"
+                    class="shrink-0 mt-0.5 size-4 border-gray-300 rounded-full text-blue-600 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500">
+                <span
+                    class="text-sm font-medium text-gray-600 ms-3 dark:text-neutral-400 group-hover:text-blue-700 transition-colors">for...of</span>
+            </label>
+
+            <label for="q1-c"
+                class="group flex p-3 w-full bg-white border border-gray-200 rounded-xl text-sm hover:border-blue-500 hover:bg-blue-50/50 dark:bg-neutral-900 dark:border-neutral-700 transition-all cursor-pointer">
+                <input type="radio" name="q1" id="q1-c"
+                    class="shrink-0 mt-0.5 size-4 border-gray-300 rounded-full text-blue-600 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500">
+                <span
+                    class="text-sm font-medium text-gray-600 ms-3 dark:text-neutral-400 group-hover:text-blue-700 transition-colors">forEach</span>
+            </label>
+        </div>
     </section>
 
     <!-- Question à choix MULTIPLES (Checkbox) -->
-    <section aria-labelledby="q2-label">
+    <section
+        class="mt-10 p-6 bg-white border border-gray-200 rounded-2xl shadow-sm dark:bg-neutral-900 dark:border-neutral-800">
         <div class="mb-5">
-            <span class="text-xs text-slate-400 font-medium uppercase tracking-widest">Question 5 / 10</span>
-            <h2 id="q2-label" class="font-heading font-semibold text-xl text-slate-900 mt-2 leading-snug">
+            <div class="flex items-center gap-x-2 mb-2">
+                <span
+                    class="size-5 flex items-center justify-center bg-teal-600 text-white rounded-full text-[10px] font-bold">5</span>
+                <span class="text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-neutral-500">Question 5
+                    / 10</span>
+            </div>
+            <h2 class="text-xl font-bold text-gray-800 dark:text-white">
                 Quelles sont les méthodes qui retournent un nouveau tableau ?
             </h2>
         </div>
 
-        <fieldset>
-            <legend
-                class="inline-flex items-center gap-2 text-sm font-semibold text-teal-700 bg-teal-50 border border-teal-100 rounded-lg px-3 py-1 mb-4">
-                <span class="w-2 h-2 rounded-sm bg-teal-500"></span>
-                Sélectionnez TOUTES les bonnes réponses
-            </legend>
-            <div class="space-y-3">
-                <label
-                    class="flex items-start gap-3 cursor-pointer p-4 rounded-xl border border-slate-200 bg-white hover:border-teal-400 hover:bg-teal-50 transition-all duration-150 group">
-                    <input type="checkbox" name="q2-check" value="a"
-                        class="mt-0.5 h-5 w-5 rounded text-teal-600 border-slate-300 focus:ring-teal-500 cursor-pointer" />
-                    <span class="text-sm text-slate-700 font-normal">map()</span>
-                </label>
-                <label
-                    class="flex items-start gap-3 cursor-pointer p-4 rounded-xl border border-slate-200 bg-white hover:border-teal-400 hover:bg-teal-50 transition-all duration-150 group">
-                    <input type="checkbox" name="q2-check" value="b"
-                        class="mt-0.5 h-5 w-5 rounded text-teal-600 border-slate-300 focus:ring-teal-500 cursor-pointer" />
-                    <span class="text-sm text-slate-700 font-normal">filter()</span>
-                </label>
-                <label
-                    class="flex items-start gap-3 cursor-pointer p-4 rounded-xl border border-slate-200 bg-white hover:border-teal-400 hover:bg-teal-50 transition-all duration-150 group">
-                    <input type="checkbox" name="q2-check" value="c"
-                        class="mt-0.5 h-5 w-5 rounded text-teal-600 border-slate-300 focus:ring-teal-500 cursor-pointer" />
-                    <span class="text-sm text-slate-700 font-normal">forEach()</span>
-                </label>
-            </div>
-        </fieldset>
+        <div
+            class="bg-teal-50 border border-teal-100 text-sm text-teal-800 rounded-xl p-3 dark:bg-teal-800/10 dark:border-teal-900 dark:text-teal-500 mb-6 flex gap-x-2">
+            <svg class="size-4 shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+                <path d="M12 9v4" />
+                <path d="M12 17h.01" />
+            </svg>
+            <span><strong>Info:</strong> Sélectionnez TOUTES les bonnes réponses.</span>
+        </div>
+
+        <div class="grid gap-y-3">
+            <label for="q2-a"
+                class="group flex p-3 w-full bg-white border border-gray-200 rounded-xl text-sm hover:border-blue-500 hover:bg-blue-50/50 dark:bg-neutral-900 dark:border-neutral-700 transition-all cursor-pointer">
+                <input type="checkbox" id="q2-a"
+                    class="shrink-0 mt-0.5 size-4 border-gray-300 rounded text-blue-600 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500">
+                <span
+                    class="text-sm font-medium text-gray-600 ms-3 dark:text-neutral-400 group-hover:text-blue-700 transition-colors">map()</span>
+            </label>
+
+            <label for="q2-b"
+                class="group flex p-3 w-full bg-white border border-gray-200 rounded-xl text-sm hover:border-blue-500 hover:bg-blue-50/50 dark:bg-neutral-900 dark:border-neutral-700 transition-all cursor-pointer">
+                <input type="checkbox" id="q2-b"
+                    class="shrink-0 mt-0.5 size-4 border-gray-300 rounded text-blue-600 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500">
+                <span
+                    class="text-sm font-medium text-gray-600 ms-3 dark:text-neutral-400 group-hover:text-blue-700 transition-colors">filter()</span>
+            </label>
+
+            <label for="q2-c"
+                class="group flex p-3 w-full bg-white border border-gray-200 rounded-xl text-sm hover:border-blue-500 hover:bg-blue-50/50 dark:bg-neutral-900 dark:border-neutral-700 transition-all cursor-pointer">
+                <input type="checkbox" id="q2-c"
+                    class="shrink-0 mt-0.5 size-4 border-gray-300 rounded text-blue-600 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500">
+                <span
+                    class="text-sm font-medium text-gray-600 ms-3 dark:text-neutral-400 group-hover:text-blue-700 transition-colors">forEach()</span>
+            </label>
+        </div>
     </section>
 
 </body>

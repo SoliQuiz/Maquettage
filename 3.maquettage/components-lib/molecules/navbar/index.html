@@ -14,68 +14,64 @@
 <body class="bg-slate-50 font-sans">
 
     <!-- Navbar Étudiant -->
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
-        <nav role="navigation" aria-label="Navigation principale"
-            class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-            <!-- Logo atom -->
-            <a href="#" class="inline-flex items-center gap-2 group" aria-label="SoliQuiz - Accueil">
-                <div
-                    class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center">
-                    <span class="text-white font-heading font-bold text-sm">SQ</span>
+    <header
+        class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white border-b border-gray-200 text-sm py-3 dark:bg-neutral-800 dark:border-neutral-700">
+        <nav class="max-w-6xl w-full mx-auto px-4 flex items-center justify-between gap-x-2 sm:gap-x-4">
+            <a href="#" class="flex items-center gap-x-2 text-xl font-semibold dark:text-white">
+                <div class="size-8 flex-shrink-0 bg-blue-600 flex items-center justify-center rounded-lg shadow-sm">
+                    <span class="text-white font-bold text-xs uppercase">SQ</span>
                 </div>
-                <span class="font-heading font-bold text-lg text-slate-900">SoliQuiz</span>
+                <span class="font-bold text-lg text-gray-800 dark:text-neutral-200">SoliQuiz</span>
             </a>
 
-            <!-- Links -->
-            <div class="hidden md:flex items-center gap-1">
-                <a href="#" aria-current="page"
-                    class="px-4 py-2 text-sm font-semibold text-primary-600 bg-primary-50 rounded-lg transition-colors">Tableau
-                    de bord</a>
-                <a href="#"
-                    class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors">Historique</a>
-                <button type="button"
-                    class="ml-4 px-4 py-2 text-sm font-medium text-slate-500 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors">
+            <div class="flex items-center gap-x-2">
+                <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg bg-blue-50 text-blue-600 dark:bg-blue-400/10 dark:text-blue-400"
+                    href="#" aria-current="page">
+                    Tableau de bord
+                </a>
+                <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg text-gray-500 hover:text-blue-600 dark:text-neutral-500 dark:hover:text-blue-400"
+                    href="#">
+                    Historique
+                </a>
+                <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg text-gray-500 hover:text-red-600 dark:text-neutral-500 dark:hover:text-red-400"
+                    href="#">
                     Déconnexion
-                </button>
+                </a>
             </div>
-
-            <!-- Mobile toggle -->
-            <button type="button" class="md:hidden p-2 rounded-lg text-slate-500 hover:bg-slate-100 transition-colors"
-                aria-label="Ouvrir le menu">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
         </nav>
     </header>
 
     <div class="p-8 text-slate-400 text-sm text-center">↑ Navbar Étudiant</div>
 
     <!-- Navbar Formateur (variante) -->
-    <header class="sticky top-0 z-50 bg-slate-900 border-b border-slate-700 shadow-md">
-        <nav role="navigation" aria-label="Navigation formateur"
-            class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-            <a href="#" class="inline-flex items-center gap-2 group">
-                <div
-                    class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center">
-                    <span class="text-white font-heading font-bold text-sm">SQ</span>
+    <header
+        class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-slate-900 border-b border-slate-700 text-sm py-3 px-4 dark:bg-neutral-900 dark:border-neutral-800">
+        <nav class="max-w-6xl w-full mx-auto flex items-center justify-between gap-x-2 sm:gap-x-4">
+            <a href="#" class="flex items-center gap-x-2 text-xl font-semibold text-white">
+                <div class="size-8 flex-shrink-0 bg-blue-600 flex items-center justify-center rounded-lg shadow-sm">
+                    <span class="text-white font-bold text-xs uppercase">SQ</span>
                 </div>
-                <span class="font-heading font-bold text-lg text-white">SoliQuiz <span
-                        class="text-slate-400 font-normal text-sm ml-1">Formateur</span></span>
+                <span class="font-bold text-lg hidden sm:block">SoliQuiz <span
+                        class="ms-1.5 py-0.5 px-1.5 rounded-lg text-[10px] bg-blue-500/10 text-blue-500 border border-blue-500/20 uppercase">Formateur</span></span>
             </a>
-            <div class="hidden md:flex items-center gap-1">
-                <a href="#" aria-current="page"
-                    class="px-4 py-2 text-sm font-semibold text-white bg-white/10 rounded-lg transition-colors">Tableau
-                    de bord</a>
-                <a href="#"
-                    class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors">Bibliothèque
-                    QCM</a>
-                <a href="#"
-                    class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors">Suivis
-                    Classes</a>
-                <button type="button"
-                    class="ml-4 px-3 py-2 text-xs font-medium text-slate-400 hover:text-red-400 hover:bg-red-900/20 rounded-lg transition-colors">Déconnexion</button>
+
+            <div class="flex items-center gap-x-2">
+                <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg bg-white/10 text-white"
+                    href="#" aria-current="page">
+                    Dashboard
+                </a>
+                <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg text-slate-300 hover:text-white hover:bg-white/10"
+                    href="#">
+                    Bibliothèque
+                </a>
+                <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg text-slate-300 hover:text-white hover:bg-white/10"
+                    href="#">
+                    Suivi
+                </a>
+                <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg text-slate-400 hover:text-red-400"
+                    href="#">
+                    Déconnexion
+                </a>
             </div>
         </nav>
     </header>

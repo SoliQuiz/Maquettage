@@ -12,46 +12,26 @@
 
 <body class="bg-slate-50 font-sans p-10 space-y-6 max-w-xs">
 
-    <div class="flex flex-col gap-1.5">
-        <label for="select-session" class="text-sm font-semibold text-slate-700">Session associée</label>
-        <div class="relative">
-            <select id="select-session" name="session" class="w-full appearance-none px-4 py-2.5 border border-slate-300 rounded-xl text-slate-800 text-sm bg-white
-                     focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500
-                     hover:border-slate-400 transition-all duration-200 cursor-pointer">
-                <option value="">-- Sélectionner une session --</option>
-                <option value="s1">Session Dev Web – Semaine 3</option>
-                <option value="s2">Session Algorithmique – Semaine 5</option>
-            </select>
-            <div class="pointer-events-none absolute inset-y-0 right-3 flex items-center">
-                <svg class="h-4 w-4 text-slate-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                    fill="currentColor">
-                    <path fill-rule="evenodd"
-                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                        clip-rule="evenodd" />
-                </svg>
-            </div>
-        </div>
+    <!-- Session Select -->
+    <div class="max-w-xs">
+        <label for="select-session" class="block text-sm font-medium mb-2 dark:text-white">Session associée</label>
+        <select id="select-session"
+            class="py-3 px-4 pe-9 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
+            <option selected value="">-- Sélectionner une session --</option>
+            <option value="s1">Session Dev Web – Semaine 3</option>
+            <option value="s2">Session Algorithmique – Semaine 5</option>
+        </select>
     </div>
 
-    <div class="flex flex-col gap-1.5">
-        <label for="select-objectif" class="text-sm font-semibold text-slate-700">Micro-objectif</label>
-        <div class="relative">
-            <select id="select-objectif" name="objectif" class="w-full appearance-none px-4 py-2.5 border border-slate-300 rounded-xl text-slate-800 text-sm bg-white
-                     focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500
-                     hover:border-slate-400 transition-all duration-200 cursor-pointer">
-                <option value="">-- Sélectionner un objectif --</option>
-                <option value="o1">Comprendre les boucles</option>
-                <option value="o2">Maîtriser les tableaux JS</option>
-            </select>
-            <div class="pointer-events-none absolute inset-y-0 right-3 flex items-center">
-                <svg class="h-4 w-4 text-slate-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                    fill="currentColor">
-                    <path fill-rule="evenodd"
-                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                        clip-rule="evenodd" />
-                </svg>
-            </div>
-        </div>
+    <!-- Objectif Select -->
+    <div class="max-w-xs">
+        <label for="select-objectif" class="block text-sm font-medium mb-2 dark:text-white">Micro-objectif</label>
+        <select id="select-objectif"
+            class="py-3 px-4 pe-9 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
+            <option selected value="">-- Sélectionner un objectif --</option>
+            <option value="o1">Comprendre les boucles</option>
+            <option value="o2">Maîtriser les tableaux JS</option>
+        </select>
     </div>
 
 </body>

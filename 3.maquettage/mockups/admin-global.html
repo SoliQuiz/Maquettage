@@ -14,72 +14,123 @@
 <body class="bg-slate-50 font-sans min-h-screen flex flex-col">
 
     <!-- Navbar Admin -->
-    <header class="sticky top-0 z-50 bg-slate-900 border-b border-slate-700 shadow-md">
-        <nav class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-            <div class="inline-flex items-center gap-2">
-                <div
-                    class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center">
-                    <span class="text-white font-heading font-bold text-sm">SQ</span></div>
-                <span class="font-heading font-bold text-lg text-white">SoliQuiz <span
-                        class="text-red-400 text-xs font-semibold ml-1 px-1.5 py-0.5 bg-red-900/30 rounded">ADMIN</span></span>
+    <header
+        class="sticky top-0 z-50 flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-slate-900 border-b border-slate-700 text-sm py-3 px-4 dark:bg-neutral-900 dark:border-neutral-800">
+        <nav class="max-w-6xl w-full mx-auto flex items-center justify-between gap-x-4">
+            <div class="flex items-center gap-x-3 text-white">
+                <div class="size-8 flex-shrink-0 bg-blue-600 flex items-center justify-center rounded-lg shadow-sm">
+                    <span class="font-bold text-xs uppercase">SQ</span>
+                </div>
+                <span class="font-bold text-lg hidden sm:block">SoliQuiz <span
+                        class="ms-1.5 py-0.5 px-1.5 rounded-lg text-[10px] bg-red-500/10 text-red-500 border border-red-500/20 uppercase">Admin</span></span>
             </div>
-            <div class="hidden md:flex items-center gap-1">
-                <a href="#" aria-current="page"
-                    class="px-4 py-2 text-sm font-semibold text-white bg-white/10 rounded-lg">Vue Globale</a>
-                <a href="#"
-                    class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors">Utilisateurs</a>
-                <a href="#"
-                    class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors">Synchronisation
-                    LMS</a>
-                <button type="button"
-                    class="ml-4 px-3 py-2 text-xs text-slate-400 hover:text-red-400 rounded-lg transition-colors">Déconnexion</button>
+
+            <div class="flex items-center gap-x-2 sm:gap-x-4">
+                <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg bg-white/10 text-white"
+                    href="#" aria-current="page">
+                    Vue Globale
+                </a>
+                <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg text-slate-300 hover:text-white hover:bg-white/10"
+                    href="#">
+                    Utilisateurs
+                </a>
+                <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg text-slate-300 hover:text-white hover:bg-white/10"
+                    href="#">
+                    Sync LMS
+                </a>
+                <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg text-slate-400 hover:text-red-400"
+                    href="authentification.html">
+                    Déconnexion
+                </a>
             </div>
         </nav>
     </header>
 
     <main class="flex-1 max-w-6xl mx-auto px-4 py-10 w-full space-y-8">
         <div>
-            <h1 class="font-heading font-bold text-3xl text-slate-900 mb-2">Tableau de bord analytique des cohortes</h1>
-            <p class="text-slate-500">Vue globale en temps réel de l'activité du centre de formation.</p>
+            <h1 class="text-3xl font-bold text-gray-800 dark:text-white mb-2">Tableau de bord analytique des cohortes
+            </h1>
+            <p class="text-gray-500 dark:text-neutral-400">Vue globale en temps réel de l'activité du centre de
+                formation.</p>
         </div>
 
         <!-- KPI Row -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
-            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 flex items-center gap-4">
-                <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center shrink-0"><svg
-                        xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-500" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg></div>
-                <div>
-                    <p class="text-sm font-medium text-slate-500">Total Utilisateurs</p>
-                    <p class="font-heading font-bold text-3xl text-slate-900">150</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            <!-- Card -->
+            <div
+                class="flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-800">
+                <div class="p-4 md:p-5 flex gap-x-4">
+                    <div
+                        class="flex-shrink-0 flex justify-center items-center size-[46px] bg-blue-100 rounded-lg dark:bg-blue-800/30">
+                        <svg class="flex-shrink-0 size-5 text-blue-600 dark:text-blue-500"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <div class="grow">
+                        <div class="flex items-center gap-x-2">
+                            <p class="text-xs uppercase tracking-wide text-gray-500 dark:text-neutral-500">Total
+                                Utilisateurs</p>
+                        </div>
+                        <div class="mt-1 flex items-center gap-x-2">
+                            <h3 class="text-xl sm:text-2xl font-medium text-gray-800 dark:text-neutral-200">150</h3>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 flex items-center gap-4">
-                <div class="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center shrink-0"><svg
-                        xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg></div>
-                <div>
-                    <p class="text-sm font-medium text-slate-500">Taux réussite global</p>
-                    <p class="font-heading font-bold text-3xl text-slate-900">78<span
-                            class="text-lg font-semibold text-slate-500">%</span></p>
+            <!-- Card -->
+            <div
+                class="flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-800">
+                <div class="p-4 md:p-5 flex gap-x-4">
+                    <div
+                        class="flex-shrink-0 flex justify-center items-center size-[46px] bg-teal-100 rounded-lg dark:bg-teal-800/30">
+                        <svg class="flex-shrink-0 size-5 text-teal-600 dark:text-teal-500"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <div class="grow">
+                        <div class="flex items-center gap-x-2">
+                            <p class="text-xs uppercase tracking-wide text-gray-500 dark:text-neutral-500">Taux réussite
+                                global</p>
+                        </div>
+                        <div class="mt-1 flex items-center gap-x-2">
+                            <h3 class="text-xl sm:text-2xl font-medium text-gray-800 dark:text-neutral-200">78%</h3>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 flex items-center gap-4">
-                <div class="w-12 h-12 rounded-xl bg-secondary-50 flex items-center justify-center shrink-0"><svg
-                        xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-secondary-500" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                    </svg></div>
-                <div>
-                    <p class="text-sm font-medium text-slate-500">QCM générés</p>
-                    <p class="font-heading font-bold text-3xl text-slate-900">120</p>
+            <!-- Card -->
+            <div
+                class="flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-800">
+                <div class="p-4 md:p-5 flex gap-x-4">
+                    <div
+                        class="flex-shrink-0 flex justify-center items-center size-[46px] bg-orange-100 rounded-lg dark:bg-orange-800/30">
+                        <svg class="flex-shrink-0 size-5 text-orange-600 dark:text-orange-500"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <line x1="16" y1="13" x2="8" y2="13" />
+                            <line x1="16" y1="17" x2="8" y2="17" />
+                            <polyline points="10 9 9 9 8 9" />
+                        </svg>
+                    </div>
+                    <div class="grow">
+                        <div class="flex items-center gap-x-2">
+                            <p class="text-xs uppercase tracking-wide text-gray-500 dark:text-neutral-500">QCM générés
+                            </p>
+                        </div>
+                        <div class="mt-1 flex items-center gap-x-2">
+                            <h3 class="text-xl sm:text-2xl font-medium text-gray-800 dark:text-neutral-200">120</h3>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -87,48 +138,61 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <!-- Gestion utilisateurs -->
             <section>
-                <h2 class="font-heading font-semibold text-xl text-slate-800 mb-4">Gestion des rôles</h2>
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-                    <table class="w-full text-sm">
-                        <thead>
-                            <tr class="bg-slate-50 border-b border-slate-200">
-                                <th
-                                    class="text-left px-4 py-3 text-xs font-semibold text-slate-600 uppercase tracking-wider">
+                <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Gestion des rôles</h2>
+                <div
+                    class="bg-white border border-gray-200 shadow-sm rounded-xl overflow-hidden dark:bg-neutral-900 dark:border-neutral-800">
+                    <table class="min-w-full divide-y divide-gray-200 dark:divide-neutral-700">
+                        <thead class="bg-gray-50 dark:bg-neutral-800">
+                            <tr>
+                                <th scope="col"
+                                    class="px-6 py-3 text-start text-xs font-semibold text-gray-500 uppercase tracking-wider dark:text-neutral-500">
                                     Nom</th>
-                                <th
-                                    class="text-left px-4 py-3 text-xs font-semibold text-slate-600 uppercase tracking-wider">
+                                <th scope="col"
+                                    class="px-6 py-3 text-start text-xs font-semibold text-gray-500 uppercase tracking-wider dark:text-neutral-500">
                                     Rôle</th>
-                                <th
-                                    class="text-right px-4 py-3 text-xs font-semibold text-slate-600 uppercase tracking-wider">
+                                <th scope="col"
+                                    class="px-6 py-3 text-end text-xs font-semibold text-gray-500 uppercase tracking-wider dark:text-neutral-500">
                                     Actions</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-slate-100">
-                            <tr class="hover:bg-slate-50 group transition-colors">
-                                <td class="px-4 py-3 font-medium text-slate-800">Youssef Bensalah</td>
-                                <td class="px-4 py-3"><span
-                                        class="px-2 py-0.5 rounded-md text-xs font-medium bg-primary-100 text-primary-700">Formateur</span>
+                        <tbody class="divide-y divide-gray-200 dark:divide-neutral-700">
+                            <tr class="hover:bg-gray-50 dark:hover:bg-neutral-800">
+                                <td
+                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
+                                    Youssef Bensalah</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-neutral-400">
+                                    <span
+                                        class="inline-flex items-center gap-x-1.5 py-1 px-2.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-800/30 dark:text-blue-500">Formateur</span>
                                 </td>
-                                <td class="px-4 py-3 text-right"><button
-                                        class="px-2 py-1 text-xs bg-slate-100 hover:bg-primary-100 text-slate-600 hover:text-primary-700 rounded-lg transition-all opacity-0 group-hover:opacity-100">Modifier</button>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-slate-50 group transition-colors">
-                                <td class="px-4 py-3 font-medium text-slate-800">Mehdi Alami</td>
-                                <td class="px-4 py-3"><span
-                                        class="px-2 py-0.5 rounded-md text-xs font-medium bg-green-100 text-green-700">Étudiant</span>
-                                </td>
-                                <td class="px-4 py-3 text-right"><button
-                                        class="px-2 py-1 text-xs bg-slate-100 hover:bg-primary-100 text-slate-600 hover:text-primary-700 rounded-lg transition-all opacity-0 group-hover:opacity-100">Modifier</button>
+                                <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
+                                    <button type="button"
+                                        class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400">Modifier</button>
                                 </td>
                             </tr>
-                            <tr class="hover:bg-slate-50 group transition-colors">
-                                <td class="px-4 py-3 font-medium text-slate-800">Fatine Zaki</td>
-                                <td class="px-4 py-3"><span
-                                        class="px-2 py-0.5 rounded-md text-xs font-medium bg-primary-100 text-primary-700">Formateur</span>
+                            <tr class="hover:bg-gray-50 dark:hover:bg-neutral-800">
+                                <td
+                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
+                                    Mehdi Alami</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-neutral-400">
+                                    <span
+                                        class="inline-flex items-center gap-x-1.5 py-1 px-2.5 rounded-full text-xs font-medium bg-teal-100 text-teal-800 dark:bg-teal-800/30 dark:text-teal-500">Étudiant</span>
                                 </td>
-                                <td class="px-4 py-3 text-right"><button
-                                        class="px-2 py-1 text-xs bg-slate-100 hover:bg-primary-100 text-slate-600 hover:text-primary-700 rounded-lg transition-all opacity-0 group-hover:opacity-100">Modifier</button>
+                                <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
+                                    <button type="button"
+                                        class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400">Modifier</button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 dark:hover:bg-neutral-800">
+                                <td
+                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
+                                    Fatine Zaki</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-neutral-400">
+                                    <span
+                                        class="inline-flex items-center gap-x-1.5 py-1 px-2.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-800/30 dark:text-blue-500">Formateur</span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
+                                    <button type="button"
+                                        class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400">Modifier</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -138,44 +202,56 @@
 
             <!-- Synchronisation SoliLMS -->
             <section>
-                <h2 class="font-heading font-semibold text-xl text-slate-800 mb-4">Synchronisation avec SoliLMS</h2>
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 space-y-5">
+                <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Synchronisation avec SoliLMS</h2>
+                <div
+                    class="bg-white border border-gray-200 shadow-sm rounded-xl p-6 dark:bg-neutral-900 dark:border-neutral-800 space-y-6">
                     <!-- Statut API -->
-                    <div class="flex items-center justify-between p-4 bg-teal-50 border border-teal-200 rounded-xl">
-                        <div class="flex items-center gap-2.5">
-                            <span class="w-2.5 h-2.5 rounded-full bg-teal-500 animate-pulse"></span>
-                            <span class="text-sm font-semibold text-teal-800">API SoliLMS : Connectée</span>
+                    <div class="bg-teal-50 border border-teal-200 text-sm text-teal-800 rounded-lg p-4 dark:bg-teal-800/10 dark:border-teal-900 dark:text-teal-500"
+                        role="alert">
+                        <div class="flex items-center">
+                            <span class="size-2 bg-teal-500 rounded-full me-3 animate-pulse"></span>
+                            <span class="font-bold">API SoliLMS : Connectée</span>
+                            <span class="ms-auto text-xs opacity-70">il y a 2h</span>
                         </div>
-                        <span class="text-xs text-teal-600">il y a 2h</span>
                     </div>
 
                     <button type="button"
-                        class="w-full flex items-center justify-center gap-2 px-5 py-3 bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold rounded-xl shadow-sm hover:shadow-md transition-all duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="1.5">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        class="py-3 px-4 w-full inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-xl border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+                        <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                            <path d="M3 3v5h5" />
+                            <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16" />
+                            <path d="M16 16h5v5" />
                         </svg>
                         Déclencher l'export manuel des notes
                     </button>
 
                     <!-- Logs console -->
-                    <div class="bg-slate-900 rounded-xl p-4 space-y-1.5">
-                        <p class="text-xs font-mono text-green-400">[14:12:05] ✓ Export Session "JS Semaine 3" — 23
-                            étudiants</p>
-                        <p class="text-xs font-mono text-green-400">[12:00:01] ✓ Export Session "Git Fondamentaux" — 20
-                            étudiants</p>
-                        <p class="text-xs font-mono text-slate-500">[10:30:44] ⟳ Connexion API SoliLMS établie</p>
+                    <div class="bg-slate-900 rounded-xl p-4 font-mono text-xs dark:bg-black">
+                        <div class="flex gap-x-2 text-teal-400">
+                            <span>[14:12:05]</span>
+                            <span>✓ Export Session "JS Semaine 3" — 23 étudiants</span>
+                        </div>
+                        <div class="flex gap-x-2 text-teal-400 mt-1">
+                            <span>[12:00:01]</span>
+                            <span>✓ Export Session "Git Fondamentaux" — 20 étudiants</span>
+                        </div>
+                        <div class="flex gap-x-2 text-slate-500 mt-1">
+                            <span>[10:30:44]</span>
+                            <span>⟳ Connexion API SoliLMS établie</span>
+                        </div>
                     </div>
                 </div>
             </section>
         </div>
     </main>
 
-    <footer class="border-t border-slate-200 bg-white mt-auto">
-        <div class="max-w-6xl mx-auto px-4 py-5 flex items-center justify-between">
-            <p class="text-xs text-slate-400">SoliQuiz v1.0.0 — Admin Center © 2026</p>
-            <a href="#" class="text-xs text-slate-400 hover:text-slate-600">Aide Admin</a>
+    <footer class="mt-auto py-5 border-t border-gray-200 dark:border-neutral-700">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center text-gray-500 dark:text-neutral-500">
+            <p class="text-xs">SoliQuiz v1.0.0 — Admin Center © 2026</p>
+            <a href="#" class="text-xs hover:text-blue-600 dark:hover:text-blue-500">Aide Admin</a>
         </div>
     </footer>
 

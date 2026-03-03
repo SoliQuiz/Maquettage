@@ -13,34 +13,37 @@
 <body class="bg-slate-50 font-sans p-10 flex flex-wrap gap-8 items-center">
 
     <!-- Timer normal (ok) -->
-    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-white border border-slate-200 shadow-sm"
-        aria-label="Temps restant : 15 minutes 30 secondes" role="timer">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-500" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+    <span
+        class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-white/10 dark:text-white border border-gray-200 dark:border-neutral-700">
+        <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
         </svg>
-        <span class="text-lg font-mono font-bold text-slate-800">15:30</span>
-    </div>
+        15:30
+    </span>
 
     <!-- Timer avertissement (<5min) -->
-    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-amber-50 border border-amber-200 shadow-sm"
-        aria-label="Temps restant : 4 minutes 12 secondes" role="timer">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+    <span
+        class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-800/30 dark:text-yellow-500 border border-yellow-200 dark:border-yellow-800">
+        <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
         </svg>
-        <span class="text-lg font-mono font-bold text-amber-700">04:12</span>
-    </div>
+        04:12
+    </span>
 
-    <!-- Timer critique (<1min) avec animation pulse -->
-    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-red-50 border border-red-300 shadow-sm animate-pulse"
-        aria-label="Temps restant : 47 secondes" role="timer">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+    <!-- Timer critique (<1min) -->
+    <span
+        class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500 border border-red-200 dark:border-red-800 animate-pulse">
+        <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
         </svg>
-        <span class="text-lg font-mono font-bold text-red-700">00:47</span>
-    </div>
+        00:47
+    </span>
 
 </body>
 

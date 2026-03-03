@@ -12,55 +12,47 @@
 
 <body class="bg-slate-50 font-sans p-10 space-y-8 max-w-lg">
 
-    <!-- Groupe Radio (choix unique) avec distinction visuelle claire -->
-    <fieldset>
-        <legend
-            class="text-sm font-semibold text-primary-700 bg-primary-50 border border-primary-100 rounded-lg px-3 py-1 inline-flex items-center gap-2 mb-4">
-            <span class="w-2 h-2 rounded-full bg-primary-500"></span>
-            Sélectionnez UNE seule réponse
-        </legend>
+    <!-- Groupe Radio (choix unique) -->
+    <div class="space-y-3">
+        <div class="flex flex-col gap-2">
+            <div class="flex items-center gap-x-2">
+                <input type="radio" name="hs-radio-group"
+                    class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                    id="hs-radio-group-1" checked>
+                <label for="hs-radio-group-1" class="text-sm text-gray-500 ms-2 dark:text-neutral-400">Choix A — Une
+                    Réponse (Correct)</label>
+            </div>
 
-        <div class="space-y-3">
-            <label
-                class="flex items-start gap-3 cursor-pointer p-4 rounded-xl border border-slate-200 bg-white hover:border-primary-400 hover:bg-primary-50 transition-all duration-150 group">
-                <input type="radio" name="q1" value="a"
-                    class="mt-0.5 h-5 w-5 text-primary-600 border-slate-300 focus:ring-primary-500 cursor-pointer" />
-                <span class="text-sm text-slate-700 group-hover:text-slate-900 font-normal">Choix A — Une Réponse
-                    (Correct)</span>
-            </label>
-            <label
-                class="flex items-start gap-3 cursor-pointer p-4 rounded-xl border border-slate-200 bg-white hover:border-primary-400 hover:bg-primary-50 transition-all duration-150 group">
-                <input type="radio" name="q1" value="b"
-                    class="mt-0.5 h-5 w-5 text-primary-600 border-slate-300 focus:ring-primary-500 cursor-pointer" />
-                <span class="text-sm text-slate-700 font-normal">Choix B — Une autre réponse</span>
-            </label>
+            <div class="flex items-center gap-x-2">
+                <input type="radio" name="hs-radio-group"
+                    class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                    id="hs-radio-group-2">
+                <label for="hs-radio-group-2" class="text-sm text-gray-500 ms-2 dark:text-neutral-400">Choix B — Une
+                    autre réponse</label>
+            </div>
         </div>
-    </fieldset>
+    </div>
 
     <!-- Groupe Checkbox (choix multiples) -->
-    <fieldset>
-        <legend
-            class="text-sm font-semibold text-teal-700 bg-teal-50 border border-teal-100 rounded-lg px-3 py-1 inline-flex items-center gap-2 mb-4">
-            <span class="w-2 h-2 rounded-sm bg-teal-500"></span>
-            Sélectionnez TOUTES les bonnes réponses
-        </legend>
+    <div class="space-y-3 mt-8">
+        <div class="flex flex-col gap-2">
+            <div class="flex items-center gap-x-2">
+                <input type="checkbox"
+                    class="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                    id="hs-checkbox-group-1">
+                <label for="hs-checkbox-group-1" class="text-sm text-gray-500 ms-3 dark:text-neutral-400">Choix A —
+                    Option multiple 1</label>
+            </div>
 
-        <div class="space-y-3">
-            <label
-                class="flex items-start gap-3 cursor-pointer p-4 rounded-xl border border-slate-200 bg-white hover:border-teal-400 hover:bg-teal-50 transition-all duration-150 group">
-                <input type="checkbox" name="q2" value="a"
-                    class="mt-0.5 h-5 w-5 rounded text-teal-600 border-slate-300 focus:ring-teal-500 cursor-pointer" />
-                <span class="text-sm text-slate-700 group-hover:text-slate-900 font-normal">Choix A — Option multiple
-                    1</span>
-            </label>
-            <label
-                class="flex items-start gap-3 cursor-pointer p-4 rounded-xl border border-slate-200 bg-white hover:border-teal-400 hover:bg-teal-50 transition-all duration-150 group">
-                <input type="checkbox" name="q2" value="b"
-                    class="mt-0.5 h-5 w-5 rounded text-teal-600 border-slate-300 focus:ring-teal-500 cursor-pointer" />
-                <span class="text-sm text-slate-700 font-normal">Choix B — Option multiple 2</span>
-            </label>
+            <div class="flex items-center gap-x-2">
+                <input type="checkbox"
+                    class="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                    id="hs-checkbox-group-2">
+                <label for="hs-checkbox-group-2" class="text-sm text-gray-500 ms-3 dark:text-neutral-400">Choix B —
+                    Option multiple 2</label>
+            </div>
         </div>
-    </fieldset>
+    </div>
 
 </body>
 
